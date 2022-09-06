@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/brand.png" type="icon">
+    <script src="./functions.js"></script>
+</head>
+<body>
+
+    <!-- VISUALIZADOR DE PRODUCTO -->
+    <div class="product" id="viewFrame">
+      <span id="close" onclick="closeViewProduct()">&times;</span>
+      <div id="viewImage">
+      </div>
+      <div class="viewInformation">
+        <div id="viewTitle"></div>
+        <div class="item" id="item">
+          <h4>Descripci&oacute;n</h4>
+          <div id="viewAbout"></div>
+          <div class="addToCar" id="addToCar">
+            <div id="viewPrice"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="car" id="viewCar">
+      <span id="close" onclick="closeViewCar()">&times;</span>
+      <div class="viewCar">
+        <h1>Tu carrito</h1>
+        <div id="products-list">
+          <div class="products-list-header">
+            <p>Nombre del producto</p>
+            <p>Cantidad</p>
+            <p>Precio Unidad</p>
+          </div>
+        </div>
+        <hr id="t">
+        <hr>
+        <div id="total">
+          <p id="totalPay">Total $0</p>
+          <button onclick="Pay()" id="buttonPay">Pagar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRA DE NAVEGACION -->
+    <nav>
+        <div class="brand" >
+          <a href="./" class="brand">
+            <img src="./img/brand.png" alt="" width="50px" height="50px">
+            <p>My Store</p>
+          </a>
+        </div>
+        <div class="buttons">
+            <a href="#" class="btn" onclick="viewCar()"> <img src="./img/shopping-car.png" alt="" width="30px" height="30px">Mi Carrito</a>
+        </div>
+    </nav>
+
+    <!-- PRIMERA SECCION -->
+
+    <section class="sec1">
+        <img src="./img/brand.png" alt="My Store">
+        <h1>My Store</h1>
+        <p> <i>All you need in one place</i> </p>
+    </section>
+    <section class="sec2">
+        <div class="container">
+            <div class="title">
+                <h1>Lo m&aacute;s popular</h1>
+                <hr>
+            </div>
+            <div class="product-list">
+              <div class="card" onclick="viewProduct(0);">
+                <div class="card-body">
+                  <img src="./products/watch.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Apple Watch Series 3</h3>
+                    <p>$239.67</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" onclick="viewProduct(1);">
+                <div class="card-body">
+                  <img src="./products/fryer.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Freidora digital</h3>
+                    <p>$$139.99</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" onclick="viewProduct(2);">
+                <div class="card-body">
+                  <img src="./products/iphone.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>iPhone 13 Pro Max</h3>
+                    <p>$1159.75</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h1>Secci&oacute;n de hombres</h1>
+                <hr>
+            </div>
+
+            <div class="product-list">
+              <div class="card" onclick="viewProduct(3);">
+                <div class="card-body">
+                  <img src="./products/polo1.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>camiseta tipo polo</h3>
+                    <p>$16.30</p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card" onclick="viewProduct(4);">
+                <div class="card-body">
+                  <img src="./products/polo2.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Hanes playera estilo polo</h3>
+                    <p>$12.50</p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card" onclick="viewProduct(5);">
+                <div class="card-body">
+                  <img src="./products/wallet1.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Timberland Cartera</h3>
+                    <p>$16.78</p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card" onclick="viewProduct(6);">
+                <div class="card-body">
+                  <img src="./products/gildan.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Gildan Camisetas A</h3>
+                    <p>$15.98</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" onclick="viewProduct(7);">
+                <div class="card-body">
+                  <img src="./products/watch1.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Fossil Grant Reloj</h3>
+                    <p>$49.99</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" onclick="viewProduct(8);">
+                <div class="card-body">
+                  <img src="./products/shoes1.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Under Armour Charged</h3>
+                    <p>$41.00</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="title">
+                <h1>Secci&oacute;n de mujeres</h1>
+                <hr>
+            </div>
+            <div class="product-list">
+              <div class="card" onclick="viewProduct(9);">
+                <div class="card-body">
+                  <img src="./products/underwear.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Warner's Blissful Benefits</h3>
+                    <p>$7.50</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" onclick="viewProduct(10);">
+                <div class="card-body">
+                  <img src="./products/socks1.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Calcetines de tobillo</h3>
+                    <p>$19.99</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" onclick="viewProduct(11);">
+                <div class="card-body">
+                  <img src="./products/dress1.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Cantrelle Sweetheart Neckline</h3>
+                    <p>$198.00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" onclick="viewProduct(12);">
+                <div class="card-body">
+                  <img src="./products/purse.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Bolsa de cuero Ryder</h3>
+                    <p>$150.40</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h1>Secci&oacute;n de hogar</h1>
+                <hr>
+            </div>
+            <div class="product-list">
+              <div class="card" onclick="viewProduct(13);">
+                <div class="card-body">
+                  <img src="./products/decor1.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Estanterías (3 unidades)</h3>
+                    <p>$22.99</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" onclick="viewProduct(14);">
+                <div class="card-body">
+                  <img src="./products/decor2.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Silla Papasan de mimbre</h3>
+                    <p>$183.99</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h1>Secci&oacute;n de tecnologia</h1>
+                <hr>
+            </div>
+            <div class="product-list">
+              <div class="card" onclick="viewProduct(15);">
+                <div class="card-body">
+                  <img src="./products/headphones1.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Philips H6506 Auriculares</h3>
+                    <p>$77.38</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" onclick="viewProduct(16);">
+                <div class="card-body">
+                  <img src="./products/headphones2.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Beats Studio Buds</h3>
+                    <p>$119.95</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" onclick="viewProduct(17);">
+                <div class="card-body">
+                  <img src="./products/charge.webp" alt="">
+                </div>
+                <div class="card-footer">
+                  <div class="options">
+                    <h3>Cargador inalámbrico 3 en 1</h3>
+                    <p>$149.99</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="sec3">
+        <h1>Contactanos</h1>
+        <a href="#">mystore@mystore.com</a>
+    </section>
+</body>
+</html>
